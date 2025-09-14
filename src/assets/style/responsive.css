@@ -1,0 +1,128 @@
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.0rem;
+  }
+
+  .search__input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search__button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .recipe-card img {
+    height: 150px;
+  }
+}@media (min-width: 992px) {
+  .search__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* space between input and button */
+    margin-top: 20px; /* keeps it away from title */
+  }
+
+  .search__input {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .search__button {
+    position: static;  /* ✅ no overlap */
+    width: auto;
+  }
+} 
+
+/* Title stays centered always */
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  margin: 30px auto;
+
+}
+
+
+/* Loader animation */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+  margin: 8px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+/* No recipes text */
+.status-text {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+/* Modern toggle message */
+.status-toggle {
+  position: fixed;      /* stays on top */
+  top: 20px;            /* small space from top */
+  left: 50%;            /* center horizontally */
+  transform: translateX(-50%) scale(0.8); /* start smaller */
+  background: #2563eb;  /* bright blue */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: showToggle 0.5s forwards, hideToggle 0.5s 2.5s forwards; 
+  z-index: 999;
+}
+
+/* Slide + scale + fade in */
+@keyframes showToggle {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/* Fade out */
+@keyframes hideToggle {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px) scale(0.8);
+  }
+}
+
+
+
+
+
+
+
+

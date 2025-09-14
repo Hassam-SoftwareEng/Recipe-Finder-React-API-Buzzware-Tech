@@ -1,0 +1,70 @@
+.cart {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    background: #f9f9f9;
+    border: 2px solid #2563eb; /* bright blue border */
+  }
+  
+  .cart h2 {
+   
+    color: black; /* change to black or white as you like */
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: white;
+  }
+  .cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+  }
+
+  /* Dish name */
+  .cart-item-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: black;
+  }
+  .cart-item button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .cart-item button:hover {
+    background-color: #ff3b3b;
+  }
+
+  .cart-empty {
+    color: black;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+  
